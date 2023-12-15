@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  frontend:
+    container_name: multi-stage
+    build:
+      context: .
+      dockerfile: ./multiStage/Dockerfile
+    tty: true
+    ports:
+      - "80:80"
